@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Triple DES Encryption/Decryption</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylestriple.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Triple DES Encryption/Decryption</h1>
+        
+        <div class="content">
+            <div class="encryption">
+                <h2>Encryption</h2>
+                <p>
+                    Enter text and the secret key to encrypt. You can choose between Base64 or Hexadecimal format for the output.
+                </p>
+
+                <label for="encryptText">Enter text to be Encrypted</label>
+                <textarea id="encryptText" rows="3" placeholder="Enter Plain Text..."></textarea>
+
+                <label for="secretKey">Enter Secret Key</label>
+                <input type="text" id="secretKey" placeholder="Enter Secret Key">
+
+                <label for="outputFormat">Output Text Format:</label>
+                <select id="outputFormat">
+                    <option value="Base64">Base64</option>
+                    <option value="Hexadecimal">Hexadecimal</option>
+                </select>
+
+                <button class="ui-btn" id="encryptButton">
+                    <span>Triple DES Encrypted Output</span>
+                </button>
+
+                <div class="result-box">
+                    <label>Encryption Result:</label>
+                    <textarea id="encryptResult" rows="2" readonly></textarea>
+                </div>
+            </div>
+
+            <div class="decryption">
+                <h2>Decryption</h2>
+                <p>
+                    Enter the encrypted text and the secret key to decrypt. Choose between Base64 or Hexadecimal format for the input.
+                </p>
+
+                <label for="decryptText">Enter text to be Decrypted</label>
+                <textarea id="decryptText" rows="3" placeholder="Enter Encrypted Text..."></textarea>
+
+                <label for="secretKeyDecrypt">Enter Secret Key</label>
+                <input type="text" id="secretKeyDecrypt" placeholder="Enter Secret Key">
+
+                <label for="inputFormat">Input Text Format:</label>
+                <select id="inputFormat">
+                    <option value="Base64">Base64</option>
+                    <option value="Hexadecimal">Hexadecimal</option>
+                </select>
+
+                <button class="ui-btn" id="decryptButton">
+                    <span>Triple DES Decrypted Output</span>
+                </button>
+
+                <div class="result-box">
+                    <label>Decryption Result:</label>
+                    <textarea id="decryptResult" rows="2" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>

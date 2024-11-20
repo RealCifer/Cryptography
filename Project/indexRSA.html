@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA Encryption</title>
+    <link rel="stylesheet" href="stylesRSA.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate RSA Keys</h1>
+        <div class="key-gen">
+            <label for="key-size">Select RSA Key Size</label>
+            <select id="key-size">
+                <option value="512">512 bits</option>
+                <option value="1024">1024 bits</option>
+                <option value="2048">2048 bits</option>
+            </select>
+            <button class="ui-btn">
+                <span>Generate RSA Key Pair</span>
+            </button>
+            <div class="keys">
+                <div class="key-box">
+                    <h2>Public Key <button class="ui-btn"><span>Copy</span></button></h2>
+                    <textarea id="public-key" readonly>Your public key will appear here</textarea>
+                </div>
+                <div class="key-box">
+                    <h2>Private Key <button class="ui-btn"><span>Copy</span></button></h2>
+                    <textarea id="private-key" readonly>Your private key will appear here</textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="rsa-encryption-decryption">
+            <div class="rsa-encryption">
+                <h2>RSA Encryption</h2>
+                <input type="text" placeholder="Enter Public Key" id="pub-key">
+                <textarea placeholder="Enter Plain Text" id="plain-text"></textarea>
+                <button class="ui-btn">
+                    <span>Encrypt</span>
+                </button>
+            </div>
+            <div class="rsa-decryption">
+                <h2>RSA Decryption</h2>
+                <input type="text" placeholder="Enter Private Key" id="priv-key">
+                <textarea placeholder="Enter Encrypted Text" id="encrypted-text"></textarea>
+                <button class="ui-btn">
+                    <span>Decrypt</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="result">
+            <h2>Result</h2>
+            <textarea id="result" readonly></textarea>
+        </div>
+
+        <div class="info">
+            <h2>Encryption</h2>
+            <p>RSA encryption uses the recipient's public key to transform plaintext into secure ciphertext. The sender obtains the public key, breaks the message into numerical blocks, and applies modular arithmetic to generate the encrypted data.</p>
+            
+            <h2>Decryption</h2>
+            <p>RSA decryption, done with the recipient's private key, reverses the process. The ciphertext is decrypted using the private key, revealing the original plaintext. RSA's security rests on the challenge of factoring large primes, ensuring secure communication.</p>
+        </div>
+    </div>
+</body>
+</html>
